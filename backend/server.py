@@ -8,7 +8,7 @@ import logging
 from typing import Optional, List
 import pandas as pd
 import numpy as np
-# from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -60,7 +60,7 @@ if "__main__" in sys.modules:
     setattr(sys.modules["__main__"], "PopularityRecommender", PopularityRecommender)
 
 # Initialize FastAPI App
-app = FastAPI(title="BollyWise Recommendation Engine", version="2.5.0")
+# app = FastAPI(title="BollyWise Recommendation Engine", version="2.5.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
