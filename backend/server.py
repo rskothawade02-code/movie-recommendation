@@ -307,7 +307,7 @@ def get_fallback_recommendations(req: CustomProfileRequest, reason: str = "Circu
             "match_percentage": match_pct,
             "why_recommended": f"Top rated {genres[0] if genres else 'Bollywood'} classic (Graceful fallback)",
             "genre_match_text": "Selected from verified catalog prior",
-            "stats_summary": f"IMDb: ★ {item.get('imdb', '8.0')} • Bayesian Prior",
+            "stats_summary": f"IMDb: â˜… {item.get('imdb', '8.0')} â€¢ Bayesian Prior",
             "poster": item.get("poster"),
             "plot": item.get("plot"),
             "director": item.get("director"),
@@ -554,7 +554,7 @@ def _compute_custom_recommendations(req: CustomProfileRequest, t_start: float) -
                         best_genre_match = list(shared)[0]
             
             if best_fav_title:
-                why_text = f"Because you rated \"{best_fav_title}\" {int(best_fav_rating)}★"
+                why_text = f"Because you rated \"{best_fav_title}\" {int(best_fav_rating)}â˜…"
                 genre_text = f"Matches your taste in {best_genre_match}"
             elif matching_fav_genres:
                 why_text = f"Matches your preferred genre: {matching_fav_genres[0]}"
@@ -571,7 +571,7 @@ def _compute_custom_recommendations(req: CustomProfileRequest, t_start: float) -
                 why_text = "Bollywood fan-favorite classic"
                 genre_text = "Highly rated across all viewers"
                 
-        stats_summary = f"Predicted Rating: ★ {r_hybrid:.1f}/5.0 • {match_pct}% Taste Match"
+        stats_summary = f"Predicted Rating: â˜… {r_hybrid:.1f}/5.0 â€¢ {match_pct}% Taste Match"
         
         crowd_affinity_pct = int(min(99, max(50, (r_svd / 5.0) * 100)))
         genre_match_pct = int(round(float(genre_sim_scores[idx]) * 100)) if fav_genres_set else 88
