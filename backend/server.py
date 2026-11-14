@@ -4,11 +4,11 @@ import time
 import types
 import json
 import pickle
-# import logging
+import logging
 from typing import Optional, List
 import pandas as pd
 import numpy as np
-from fastapi import FastAPI, Query, HTTPException
+# from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
