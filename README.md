@@ -98,12 +98,6 @@ movie-recommendation-system/
 
 ---
 
-## 📚 Documentation Links
-
-- **Mathematical Foundations & Engineering Manual:** [`dev_ref.md`](dev_ref.md)
-- **Technical Interview Master Q&A Guide:** [`ref.md`](ref.md)
-
----
 
 ## 📜 License
 
