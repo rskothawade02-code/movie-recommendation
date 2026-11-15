@@ -2,7 +2,7 @@ import os
 import sys
 import time
 import types
-import json
+# import json
 import pickle
 import logging
 from typing import Optional, List
@@ -749,7 +749,7 @@ def get_similar_movies(item_id: int, top_k: int = 6):
         overlap = len(target_genres & s_genres)
         if overlap > 0 or not similar:
             similar.append({
-                # "item_id": s_iid,
+                "item_id": s_iid,
                 "title": s_item["title"],
                 "release_year": s_item.get("release_year", ""),
                 "genres": [g for g in s_item.get("genres", "").split("|") if g],
